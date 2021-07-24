@@ -13,12 +13,13 @@
 <meta property="og:url" content="http://example.com/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="Silence">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/neofetch.jpg">
+<meta property="og:image" content="http://example.com/.com//neofetch.jpg">
+<meta property="og:image" content="http://example.com/.com//Seeversion.jpg">
 <meta property="article:published_time" content="2021-07-23T10:25:40.000Z">
-<meta property="article:modified_time" content="2021-07-23T11:56:37.431Z">
+<meta property="article:modified_time" content="2021-07-24T00:41:21.536Z">
 <meta property="article:author" content="黑夜、">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/neofetch.jpg">
+<meta name="twitter:image" content="http://example.com/.com//neofetch.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Silence" type="application/atom+xml">
   
@@ -165,8 +166,15 @@
         <h1 id><a href="#" class="headerlink" title></a></h1><span id="more"></span>
 
 <h2 id="1-安装Linux系统："><a href="#1-安装Linux系统：" class="headerlink" title="1 安装Linux系统："></a>1 安装Linux系统：</h2><h3 id="1-1-使用win10的Linux子系统："><a href="#1-1-使用win10的Linux子系统：" class="headerlink" title="1.1 使用win10的Linux子系统："></a>1.1 使用win10的Linux子系统：</h3><p>a. 设置-更新和安全-开发者选项-开发人员模式；<br>b. 控制面板-程序-程序和功能-启动或关系windows功能-适用于Linux的windows子系统；<br>c. Microsoft Store-搜索Linux(或Ubuntu) —安装；<br>d. 开始菜单 -&gt; Ubuntu -&gt; 设置用户名&amp;密码；<br>e. 优化操作可见 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6af3846dbe68">https://www.jianshu.com/p/6af3846dbe68</a> </p>
-<p><img src="/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/neofetch.jpg" alt="Linux">  </p>
-<h3 id="b-使用虚拟机或直接安装linux系统"><a href="#b-使用虚拟机或直接安装linux系统" class="headerlink" title="b.使用虚拟机或直接安装linux系统;"></a>b.使用虚拟机或直接安装linux系统;</h3><h2 id="2-在Linux系统中安装"><a href="#2-在Linux系统中安装" class="headerlink" title="2 在Linux系统中安装"></a>2 在Linux系统中安装</h2>
+<p><img src="/.com//neofetch.jpg" alt="win10Linux子系统">  </p>
+<h3 id="b-使用虚拟机或直接安装linux系统"><a href="#b-使用虚拟机或直接安装linux系统" class="headerlink" title="b.使用虚拟机或直接安装linux系统;"></a>b.使用虚拟机或直接安装linux系统;</h3><h2 id="1-2-安装Hexo搭建自己的博客"><a href="#1-2-安装Hexo搭建自己的博客" class="headerlink" title="1.2 安装Hexo搭建自己的博客"></a>1.2 安装Hexo搭建自己的博客</h2><p>a. 安装 nodejs<br><code>sudo apt-get install nodejs</code><br>b. 安装 npm，npm是nodejs的包管理工具，就如pip是python的包管理工具一样<br><code>sudo apt install npm</code><br>c.查看nodejs和npm是否安装完成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nodejs -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p><img src="/.com//Seeversion.jpg" alt="查看安装版本"><br>d. 安装hexo<br>sudo npm install -g hexo-cli<br>e. 创建文件夹blog，并进入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+<p>f. 初始化blog<br>hexo init</p>
+<p>g. 安装插件以发布图片<br>npm install hexo-asset-image –save</p>
+<p>h. 输入hexo，查看hexo用法</p>
+
       
 
       
@@ -257,7 +265,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Linux%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">1 安装Linux系统：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%BD%BF%E7%94%A8win10%E7%9A%84Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 使用win10的Linux子系统：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#b-%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%88%96%E7%9B%B4%E6%8E%A5%E5%AE%89%E8%A3%85linux%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.1.2.</span> <span class="toc-text">b.使用虚拟机或直接安装linux系统;</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9C%A8Linux%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.</span> <span class="toc-text">2 在Linux系统中安装</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Linux%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">1 安装Linux系统：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E4%BD%BF%E7%94%A8win10%E7%9A%84Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 使用win10的Linux子系统：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#b-%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%88%96%E7%9B%B4%E6%8E%A5%E5%AE%89%E8%A3%85linux%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.1.2.</span> <span class="toc-text">b.使用虚拟机或直接安装linux系统;</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E5%AE%89%E8%A3%85Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 安装Hexo搭建自己的博客</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
