@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: win10 | Silence</title>
+  <title>linux下调试C/C++ | Silence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Silence">
-<meta property="og:url" content="http://example.com/tags/win10/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="linux下调试C&#x2F;C++">
+<meta property="og:url" content="http://example.com/2021/07/01/linux%E4%B8%8B%E7%BC%96%E8%BE%91%E5%B9%B6%E8%BF%90%E8%A1%8CC++/index.html">
 <meta property="og:site_name" content="Silence">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-01T04:40:55.000Z">
+<meta property="article:modified_time" content="2021-09-01T14:42:44.142Z">
 <meta property="article:author" content="黑夜、">
+<meta property="article:tag" content="GCC">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="C&#x2F;C++">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Silence" type="application/atom+xml">
@@ -138,68 +143,190 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-linux下编辑并运行C++" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  	<time datetime="2021-07-23T10:25:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/">win10Linux子系统搭建Hexo博客系统</a>
+    <h1 class="article-title" itemprop="name">
+      linux下调试C/C++
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/07/01/linux%E4%B8%8B%E7%BC%96%E8%BE%91%E5%B9%B6%E8%BF%90%E8%A1%8CC++/" class="archive-article-date">
+  	<time datetime="2021-07-01T04:40:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id><a href="#" class="headerlink" title></a></h1><span id="more"></span>
+
+<h2 id="1-安装Linux系统："><a href="#1-安装Linux系统：" class="headerlink" title="1 安装Linux系统："></a>1 安装Linux系统：</h2><h3 id="a-使用win10的Linux子系统："><a href="#a-使用win10的Linux子系统：" class="headerlink" title="a.使用win10的Linux子系统："></a>a.使用win10的Linux子系统：</h3><p>​    1) 设置-更新和安全-开发者选项-开发人员模式；<br>​    2) 控制面板-程序-程序和功能-启动或关系windows功能-适用于Linux的windows子系统；<br>​    3) Microsoft Store-搜索Linux(或Ubuntu) —安装<br>​    4) 开始菜单 -&gt; Ubuntu -&gt; 设置用户名&amp;密码<br>​    5) 优化操作可见 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6af3846dbe68">https://www.jianshu.com/p/6af3846dbe68</a><br>​    </p>
+<h3 id="b-使用虚拟机或直接安装linux系统"><a href="#b-使用虚拟机或直接安装linux系统" class="headerlink" title="b.使用虚拟机或直接安装linux系统"></a>b.使用虚拟机或直接安装linux系统</h3><h2 id="2-安装Gcc"><a href="#2-安装Gcc" class="headerlink" title="2 安装Gcc"></a>2 安装Gcc</h2><p>​    1) 安装gcc和g++：<br>​       sudo apt install gcc<br>​       sudo apt install g++<br>​    2) 可能出现”Unable to fetch some archives…”的问题，解决：<br>​        (1) 现根据根据提示 sudo apt-get update 目的是同步/etc/apt/sources.list 和 /etc/apt/sources.list.d 中列出的源的索引<br>​        (2) 更改地址：sudo vi /etc/resolv.conf<br>​        修改为:<br>​        nameserver 8.8.8.8<br>​        nameserver 223.5.5.5<br>​        nameserver 223.6.6.6<br>​    3) 若以上两种方法还是不行 尝试换源；</p>
+<h2 id="3-使用Vim："><a href="#3-使用Vim：" class="headerlink" title="3 使用Vim："></a>3 使用Vim：</h2><p>​    在Linux终端中输入vim，就可以使用vim<br>​    vim有两种模式：1 命令模式； 2 编辑模式<br>​    </p>
+<pre><code>命令：
+    i     -&gt;    进入insert编辑模式；
+    :w    -&gt;    保存
+    :q!   -&gt;    不保存并退出
+    :wq   -&gt;    保存并退出
+    :x    -&gt;    保存并退出
+    :q[uit]  -&gt;    退出当前窗口(CTRL-W q或CTRL-W CTRL-Q)
+    :Sex  -&gt;    水平分割一个窗口，浏览文件系统；
+    :Vex  -&gt;    垂直分割一个窗口，浏览文件系统；
+    gf    -&gt;    打开以光标所在字符串为文件名的文件
+    :e#或ctrl+^   -&gt;   回到刚才编辑的文件，很实用
+
+vim快捷键与命令见 https://blog.csdn.net/weixin_37657720/article/details/80645991
+</code></pre>
+<h2 id="4-vim配置"><a href="#4-vim配置" class="headerlink" title="4 vim配置"></a>4 vim配置</h2><p>​    1) 进入vim的配置文件 vim ~/.vimrc<br>​    2) 在GitHub上找一个.vimrc的配置文件，粘贴进去</p>
+<h2 id="5-最后就可以下写一个c或者c-项目-并利用g-编译-执行尝试啦"><a href="#5-最后就可以下写一个c或者c-项目-并利用g-编译-执行尝试啦" class="headerlink" title="5 最后就可以下写一个c或者c++项目 并利用g++编译 执行尝试啦~~~"></a>5 最后就可以下写一个c或者c++项目 并利用g++编译 执行尝试啦~~~</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">GCC</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">win10</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C/C++</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/01/linux%E4%B8%8B%E7%BC%96%E8%BE%91%E5%B9%B6%E8%BF%90%E8%A1%8CC++/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          win10Linux子系统搭建Hexo博客系统
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Linux%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">1 安装Linux系统：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#a-%E4%BD%BF%E7%94%A8win10%E7%9A%84Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">a.使用win10的Linux子系统：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#b-%E4%BD%BF%E7%94%A8%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%88%96%E7%9B%B4%E6%8E%A5%E5%AE%89%E8%A3%85linux%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.1.2.</span> <span class="toc-text">b.使用虚拟机或直接安装linux系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85Gcc"><span class="toc-number">1.2.</span> <span class="toc-text">2 安装Gcc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8Vim%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">3 使用Vim：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-vim%E9%85%8D%E7%BD%AE"><span class="toc-number">1.4.</span> <span class="toc-text">4 vim配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%9C%80%E5%90%8E%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%B8%8B%E5%86%99%E4%B8%80%E4%B8%AAc%E6%88%96%E8%80%85c-%E9%A1%B9%E7%9B%AE-%E5%B9%B6%E5%88%A9%E7%94%A8g-%E7%BC%96%E8%AF%91-%E6%89%A7%E8%A1%8C%E5%B0%9D%E8%AF%95%E5%95%A6"><span class="toc-number">1.5.</span> <span class="toc-text">5 最后就可以下写一个c或者c++项目 并利用g++编译 执行尝试啦~~~</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -222,9 +349,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
