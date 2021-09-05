@@ -6,14 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Silence</title>
+  <title>C#学习 | Silence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Silence">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="C#学习">
+<meta property="og:url" content="http://example.com/2021/09/04/Csharp/index.html">
 <meta property="og:site_name" content="Silence">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-04T10:25:40.000Z">
+<meta property="article:modified_time" content="2021-09-05T13:12:09.958Z">
 <meta property="article:author" content="黑夜、">
+<meta property="article:tag" content="C#">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Silence" type="application/atom+xml">
@@ -138,16 +141,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Csharp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Csharp" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/04/Csharp/">C#学习</a>
+    <h1 class="article-title" itemprop="name">
+      C#学习
     </h1>
   
 
@@ -160,10 +161,174 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id><a href="#" class="headerlink" title></a></h1>
-        
-          <a class="article-more-a" href="/2021/09/04/Csharp/#more">more >></a>
-        
+        <h1 id><a href="#" class="headerlink" title></a></h1><span id="more"></span>
+
+
+<h1 id="Csharp"><a href="#Csharp" class="headerlink" title="Csharp"></a>Csharp</h1><h2 id="1-NET"><a href="#1-NET" class="headerlink" title="1 .NET"></a>1 .NET</h2><p>笔记来自<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/documentation/"><strong>官方文档</strong></a>(非常重要)和视频</p>
+<h3 id="1-1-NET简介"><a href="#1-1-NET简介" class="headerlink" title="1.1 .NET简介"></a>1.1 .NET简介</h3><p><strong>.NET</strong><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/core/introduction">(.NET官方文档)</a> 是一种用于构建多种应用的免费开源开发平台，例如：</p>
+<ul>
+<li>Web 应用、Web API 和微服务</li>
+<li>云中的无服务器函数</li>
+<li>云原生应用</li>
+<li>移动应用</li>
+<li>桌面应用<ul>
+<li>Windows WPF</li>
+<li>Windows 窗体</li>
+<li>通用 Windows 平台 (UWP)</li>
+</ul>
+</li>
+<li>游戏</li>
+<li>物联网 (IoT)</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/machine-learning/">机器学习</a></li>
+<li>控制台应用</li>
+<li>Windows 服务</li>
+<li>使用类库在不同应用和应用类型中共享功能。</li>
+</ul>
+<p><strong>使用 .NET 时，无论你正在构建哪种类型的应用，代码和项目文件看起来都一样。 可以访问每个应用的相同运行时、API 和语言功能。</strong></p>
+<p><strong>跨平台</strong>（多操作系统创建，多处理器架构）    **开源 **       .NET 支持三种编程语言：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/">C#</a>，<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/fsharp/">F#</a>和<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/visual-basic/">Visual Basic</a> </p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/core/sdk">.NET SDK</a> 是一组用于开发和运行 .NET 应用程序的库和工具。</p>
+<h3 id="1-2-SDK-和运行时"><a href="#1-2-SDK-和运行时" class="headerlink" title="1.2 SDK 和运行时"></a>1.2 SDK 和运行时</h3><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/core/sdk">.NET SDK</a> 是一组用于开发和运行 .NET 应用程序的库和工具。</p>
+<p>SDK 下载包括以下组件：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/core/tools/">.NET CLI</a> 可用于本地开发和持续集成脚本的命令行工具；</li>
+<li><code>dotnet</code> <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/core/tools/#driver">驱动程序</a> 用于运行依赖于框架的应用的 CLI 命令；</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dotnet/roslyn">Roslyn</a> 和 <a target="_blank" rel="noopener" href="https://github.com/microsoft/visualfsharp">F#</a> 编程语言编译器；</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/visualstudio/msbuild/msbuild">MSBuild</a> 生成引擎</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/core/introduction#clr">.NET 运行时</a>。 提供类型系统、程序集加载、垃圾回收器、本机互操作和其他基本服务；</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/core/introduction#runtime-libraries">运行时库</a>。 提供基元数据类型和基本实用程序；</li>
+<li>ASP.NET Core 运行时。 为连接 Internet 的应用（如 Web 应用、IoT 应用和移动后端）提供基本服务；</li>
+<li>桌面运行时。 为 Windows 桌面应用（包括 Windows 窗体和 WPF）提供基本服务；</li>
+</ul>
+<p>运行时下载包括以下组件：</p>
+<ul>
+<li>（可选）桌面或 ASP.NET Core 运；</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/core/introduction#clr">.NET 运行时</a>。 提供类型系统、程序集加载、垃圾回收器、本机互操作和其他基本服务；</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/core/introduction#runtime-libraries">运行时库</a>。 提供基元数据类型和基本实用程序；</li>
+<li><code>dotnet</code> <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/core/tools/#driver">驱动程序</a>。 用于运行依赖于框架的应用的 CLI 命令；</li>
+</ul>
+<h3 id="1-3-NuGet"><a href="#1-3-NuGet" class="headerlink" title="1.3 NuGet"></a>1.3 NuGet</h3><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/nuget/what-is-nuget">NuGet</a> 是为 .NET 设计的开源包管理器。 NuGet 包是具有 <code>.nupkg</code> 扩展的 .zip 文件，此扩展包含编译代码 (DLL)、与该代码相关的其他文件以及描述性清单（包含包版本号等信息）。 使用代码的开发人员共享创建包，并将其发布到 <a target="_blank" rel="noopener" href="https://nuget.org/">nuget.org</a> 或专用主机。 希望使用共享代码的开发人员将包添加到其项目中，然后可以在项目代码中调用包公开的 API。</p>
+<p>有关详细信息，请参阅 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/nuget/">NuGet 文档</a>。</p>
+<h3 id="1-4-其他关于-NET的概念"><a href="#1-4-其他关于-NET的概念" class="headerlink" title="1.4 其他关于.NET的概念"></a>1.4 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/documentation/">其他关于.NET的概念</a></h3><p>…</p>
+<h2 id="2-C-语言入门"><a href="#2-C-语言入门" class="headerlink" title="2 C# 语言入门"></a>2 C# 语言入门</h2><h3 id="2-1-简介"><a href="#2-1-简介" class="headerlink" title="2.1 简介"></a>2.1 简介</h3><h4 id="2-1-1-语言介绍"><a href="#2-1-1-语言介绍" class="headerlink" title="2.1.1 语言介绍"></a>2.1.1 语言介绍</h4><p>C#（”See Sharp”）是一种新式编程语言，不仅面向对象，还类型安全。 开发人员利用 C# 能够生成在 .NET 中运行的多种安全可靠的应用程序。</p>
+<p>C# 是面向对象的、面向组件的编程语言。 C# 提供了语言构造来直接支持这些概念，让 C# 成为一种非常自然的语言，可用于创建和使用软件组件。 自诞生之日起，C# 就添加了支持新工作负载和新兴软件设计实践的功能。 C# 本质上是面向对象的语言。_* 你需要定义类型及其行为。</p>
+<p>多项 C# 功能有助于创建可靠且持久的应用程序。 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/standard/garbage-collection/">垃圾回收</a>**自动回收不可访问的未用对象所占用的内存。 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/nullable-references">可以为 null 的类型</a>可防范不引用已分配对象的变量。 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/fundamentals/exceptions">异常处理</a>提供了一种结构化且可扩展的方法来进行错误检测和恢复。 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/operators/lambda-expressions">Lambda 表达式</a>支持函数编程技术。 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/linq/">语言集成查询 (LINQ)</a> 语法创建一个公共模式，用于处理来自任何源的数据。 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/concepts/async/">异步操作</a>语言支持提供用于构建分布式系统的语法。 C# 有<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/fundamentals/types">统一类型系统</a>**。 **<u>所有 C# 类型（包括 <code>int</code> 和 <code>double</code> 等基元类型）均继承自一个根 <code>object</code> 类型</u>**。 所有类型共用一组通用运算。 任何类型的值都可以一致地进行存储、传输和处理。 此外，C# 还支持用户定义的<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/reference-types">引用类型</a>和<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/value-types">值类型</a>。 C# 允许动态分配轻型结构的对象和内嵌存储。 C# 支持泛型方法和类型，因此增强了类型安全性和性能。 C# 可提供迭代器，使集合类的实现者可以定义客户端代码的自定义行为。</p>
+<p>C# <strong>强调版本控制</strong>，以确保程序和库以兼容方式随时间推移而变化。 C# 设计中受版本控制加强直接影响的方面包括：单独的 <code>virtual</code> 和 <code>override</code> 修饰符，关于方法重载决策的规则，以及对显式接口成员声明的支持。</p>
+<h4 id="2-1-2-NET体系结构"><a href="#2-1-2-NET体系结构" class="headerlink" title="2.1.2 .NET体系结构"></a>2.1.2 .NET体系结构</h4><p><strong>C# 程序在 .NET 上运行</strong>，而 .NET 是名为公共语言运行时 (CLR) 的虚执行系统和一组类库。 CLR 是 Microsoft 对公共语言基础结构 (CLI) 国际标准的实现。 CLI 是创建执行和开发环境的基础，语言和库可以在其中无缝地协同工作。</p>
+<p>用 C# 编写的源代码被编译成符合 CLI 规范的<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/standard/managed-code">中间语言 (IL)</a>。 IL 代码和资源（如位图和字符串）存储在扩展名通常为 .dll 的程序集中。 程序集包含一个介绍程序集的类型、版本和区域性的清单。</p>
+<p>执行 C# 程序时，程序集将加载到 CLR。 CLR 会直接执行实时 (JIT) 编译，将 IL 代码转换成本机指令。 CLR 可提供其他与自动垃圾回收、异常处理和资源管理相关的服务。 CLR 执行的代码有时称为“托管代码”（而不是“非托管代码”），被编译成面向特定平台的本机语言。</p>
+<p>语言互操作性是 .NET 的一项重要功能。 C# 编译器生成的 IL 代码符合公共类型规范 (CTS)。 通过 C# 生成的 IL 代码可以与通过 .NET 版本的 F#、Visual Basic、C++ 或其他 20 多种与 CTS 兼容的任何语言所生成的代码进行交互。 一个程序集可能包含多个用不同 .NET 语言编写的模块，且类型可以相互引用，就像是用同一种语言编写的一样。</p>
+<h4 id="2-1-3-类型和变量"><a href="#2-1-3-类型和变量" class="headerlink" title="2.1.3 类型和变量"></a>2.1.3 类型和变量</h4><p><strong>类型定义 C# 中的任何数据的结构和行为</strong>。 类型的声明可以包含其成员、基类型、它实现接口和该类型允许的操作。 <strong>变量是用于引用特定类型的实例</strong>。</p>
+<p><strong>C# 有两种类型</strong>：<strong>值类型</strong> 和 <strong>引用类型</strong>。 值类型的变量直接包含它们的数据。 引用类型的变量存储对数据（称为“对象”）的引用。 对于引用类型，两个变量可以引用同一个对象；对一个变量执行的运算可能会影响另一个变量引用的对象。 借助值类型，每个变量都有自己的数据副本；因此，对一个变量执行的运算不会影响另一个变量（<code>ref</code> 和 <code>out</code> 参数变量除外）。</p>
+<p>标识符为变量名称。 标识符是不包含任何空格的 unicode 字符序列。 如果标识符的前缀为 <code>@</code>，则该标识符可以是 C# <strong>保留字</strong>。 在与其他语言交互时，使用保留字作为标识符很有用。</p>
+<p>C# 的<strong>值类型</strong>进一步分为：简单类型、枚举类型、结构类型、可以为 null 的值类型和元组值类型。 C# <strong>引用类型</strong>又细分为类类型、接口类型、数组类型和委托类型。</p>
+<ul>
+<li>值类型<ul>
+<li>简单类型<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">有符号整型</a>：<code>sbyte</code>、<code>short</code>、<code>int</code>、<code>long</code></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">无符号整型</a>：<code>byte</code>、<code>ushort</code>、<code>uint</code>、<code>ulong</code></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/standard/base-types/character-encoding-introduction">Unicode 字符</a>：<code>char</code>，表示 UTF-16 代码单元</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types">IEEE 二进制浮点</a>：<code>float</code>、<code>double</code></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types">高精度十进制浮点数</a>：<code>decimal</code></li>
+<li>布尔值：<code>bool</code>，表示布尔值（<code>true</code> 或 <code>false</code>）</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/enum">枚举类型</a><ul>
+<li><code>enum E &#123;...&#125;</code> 格式的用户定义类型。 <code>enum</code> 类型是一种包含已命名常量的独特类型。 每个 <code>enum</code> 类型都有一个基础类型（必须是八种整型类型之一）。 <code>enum</code> 类型的值集与基础类型的值集相同。</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/struct">结构类型</a><ul>
+<li>格式为 <code>struct S &#123;...&#125;</code> 的用户定义类型</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/nullable-value-types">可以为 null 的值类型</a><ul>
+<li>值为 <code>null</code> 的其他所有值类型的扩展</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/value-tuples">元组值类型</a><ul>
+<li>格式为 <code>(T1, T2, ...)</code> 的用户定义类型</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/reference-types">引用类型</a><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/class">类类型</a><ul>
+<li><strong>其他所有类型的最终基类：<code>object</code></strong></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/standard/base-types/character-encoding-introduction">Unicode 字符串</a>：<code>string</code>，表示 UTF-16 代码单元序列</li>
+<li>格式为 <code>class C &#123;...&#125;</code> 的用户定义类型</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/interface">接口类型</a><ul>
+<li>格式为 <code>interface I &#123;...&#125;</code> 的用户定义类型</li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/arrays/">数组类型</a><ul>
+<li>一维、多维和交错。 例如：<code>int[]</code>、<code>int[,]</code> 和 <code>int[][]</code></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/reference-types#the-delegate-type">委托类型</a><ul>
+<li>格式为 <code>delegate int D(...)</code> 的用户定义类型</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>C# 程序使用 <strong>类型声明</strong> 创建新类型。 类型声明指定新类型的名称和成员。 </p>
+<ul>
+<li><code>class</code> <u>类型定义包含<strong>数据成员</strong>（字段）和<strong>函数成员</strong>（方法、属性及其他）的数据结构</u>。 类类型支持单一继承和多形性，即派生类可以扩展和专门针对基类的机制。</li>
+<li><code>struct</code> 类型定义包含数据成员和函数成员的结构，这一点与类类型相似。 不过，与类不同的是，结构是值类型，通常不需要进行堆分配。 结构类型不支持用户指定的继承，并且所有结构类型均隐式继承自类型 <code>object</code>。</li>
+<li><code>interface</code> 类型将协定定义为一组已命名的公共成员。 实现 <code>interface</code> 的 <code>class</code> 或 <code>struct</code> 必须提供接口成员的实现代码。 <code>interface</code> 可以继承自多个基接口，<code>class</code> 和 <code>struct</code> 可以实现多个接口。</li>
+<li><code>delegate</code> 类型表示引用包含特定参数列表和返回类型的方法。 通过委托，可以将方法视为可分配给变量并可作为参数传递的实体。 委托类同于函数式语言提供的函数类型。 它们还类似于其他一些语言中存在的“函数指针”概念。 与函数指针不同，委托是面向对象且类型安全的。</li>
+</ul>
+<p><code>class</code>、<code>struct</code>、<code>interface</code> 和 <code>delegate</code> 类型全部都支持泛型，因此可以使用其他类型对它们进行参数化。</p>
+<p>C# 支持任意类型的一维和多维数组。 与上述类型不同，数组类型无需先声明即可使用。 相反，数组类型是通过在类型名称后面添加方括号构造而成。 例如，<code>int[]</code> 是 <code>int</code> 类型的一维数组，<code>int[,]</code> 是 <code>int</code> 类型的二维数组，<code>int[][]</code> 是由 <code>int</code> 类型的一维数组或“交错”数组构成的一维数组。</p>
+<p>可以为 null 的类型不需要单独定义。 对于所有不可以为 null 的类型 <code>T</code>，都有对应的可以为 null 的类型 <code>T?</code>，后者可以包含附加值 <code>null</code>。 例如，<code>int?</code> 是可保存任何 32 位整数或 <code>null</code> 值的类型，<code>string?</code> 是可以保存任何 <code>string</code> 或 <code>null</code> 值的类型。</p>
+<p><strong>C# 采用统一的类型系统，因此任意类型的值都可视为 <code>object</code>。 每种 C# 类型都直接或间接地派生自 <code>object</code> 类类型，而 <code>object</code> 是所有类型的最终基类。</strong> 只需将值视为类型 <code>object</code>，即可将引用类型的值视为对象。 通过执行 <strong>装箱</strong> 和 <strong>取消装箱操作</strong>，可以将值类型的值视为对象。 在以下示例中，<code>int</code> 值被转换成 <code>object</code>，然后又恢复成 <code>int</code>。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> i = <span class="number">123</span>;</span><br><span class="line"><span class="built_in">object</span> o = i;    <span class="comment">// Boxing</span></span><br><span class="line"><span class="built_in">int</span> j = (<span class="built_in">int</span>)o;  <span class="comment">// Unboxing</span></span><br></pre></td></tr></table></figure>
+
+<p>将值类型的值分配给 <code>object</code> 对象引用时，会分配一个“箱”来保存此值。 该箱是引用类型的实例，此值会被复制到该箱。 相反，当 <code>object</code> 引用被显式转换成值类型时，将检查引用的 <code>object</code> 是否是具有正确值类型的箱。 如果检查成功，则会将箱中的值复制到值类型。</p>
+<p>C# 的统一类型系统实际上意味着“按需”将值类型视为 <code>object</code> 引用。 鉴于这种统一性，使用类型 <code>object</code> 的常规用途库可以与派生自 <code>object</code> 的所有类型结合使用，包括引用类型和值类型。</p>
+<h4 id="2-1-4-程序结构"><a href="#2-1-4-程序结构" class="headerlink" title="2.1.4 程序结构"></a>2.1.4 程序结构</h4><p>C# 中的关键组织结构概念包括<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/fundamentals/program-structure">程序</a>、<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/fundamentals/types/namespaces">命名空间</a>、<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/fundamentals/types">类型</a>、<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/classes-and-structs/members">成员</a>和<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/standard/assembly/">程序集</a>。 程序声明类型，而类型则包含成员，并被整理到命名空间中。 类型示例包括类、结构和接口。 成员示例包括字段、方法、属性和事件。 <u>编译完的 C# 程序实际上会打包到程序集中。 程序集的文件扩展名通常为 <code>.exe</code> 或 <code>.dll</code>，具体视其分别实现的是应用程序还是库而定</u>。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Acme.Collections</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Stack</span>&lt;<span class="title">T</span>&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        Entry _top;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Push</span>(<span class="params">T data</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            _top = <span class="keyword">new</span> Entry(_top, data);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> T <span class="title">Pop</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (_top == <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> InvalidOperationException();</span><br><span class="line">            &#125;</span><br><span class="line">            T result = _top.Data;</span><br><span class="line">            _top = _top.Next;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">class</span> <span class="title">Entry</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">public</span> Entry Next &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">            <span class="keyword">public</span> T Data &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="title">Entry</span>(<span class="params">Entry next, T data</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                Next = next;</span><br><span class="line">                Data = data;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此类的完全限定的名称为 <code>Acme.Collections.Stack</code>。 此类包含多个成员：一个 <code>top</code> 字段、两个方法（<code>Push</code> 和 <code>Pop</code>）和一个 <code>Entry</code> 嵌套类。 <code>Entry</code> 类还包含三个成员：一个 <code>next</code> 字段、一个 <code>data</code> 字段和一个构造函数。 <code>Stack</code> 是泛型类。 它具有一个类型参数 <code>T</code>，在使用时替换为具体类型。</p>
+<p>堆栈是一个“先进后出”(FILO) 集合。 添加到堆栈顶部的新元素。 删除元素时，将从堆栈顶部删除该元素。 前面的示例声明定义堆栈的存储和行为的 <code>Stack</code> 类型。 可以声明一个引用 <code>Stack</code> 类型的实例的变量来使用该功能。</p>
+<p>程序集包含中间语言 (IL) 指令形式的可执行代码和元数据形式的符号信息。 执行前，.NET 公共语言运行时的实时 (JIT) 编译器会将程序集中的 IL 代码转换为特定于处理器的代码。</p>
+<p>由于程序集是包含代码和元数据的自描述功能单元，因此无需在 C# 中使用 <code>#include</code> 指令和头文件。 只需在编译程序时引用特定的程序集，即可在 C# 程序中使用此程序集中包含的公共类型和成员。 例如，此程序使用 <code>acme.dll</code> 程序集中的 <code>Acme.Collections.Stack</code> 类：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> Acme.Collections;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title">Example</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> s = <span class="keyword">new</span> Stack&lt;<span class="built_in">int</span>&gt;();</span><br><span class="line">        s.Push(<span class="number">1</span>); <span class="comment">// stack contains 1</span></span><br><span class="line">        s.Push(<span class="number">10</span>); <span class="comment">// stack contains 1, 10</span></span><br><span class="line">        s.Push(<span class="number">100</span>); <span class="comment">// stack contains 1, 10, 100</span></span><br><span class="line">        Console.WriteLine(s.Pop()); <span class="comment">// stack contains 1, 10</span></span><br><span class="line">        Console.WriteLine(s.Pop()); <span class="comment">// stack contains 1</span></span><br><span class="line">        Console.WriteLine(s.Pop()); <span class="comment">// stack is empty</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>若要编译此程序，需要引用包含前面示例中定义的堆栈类的程序集。</p>
+<p>C# 程序可以存储在多个源文件中。 在编译 C# 程序时，将同时处理所有源文件，并且源文件可以自由地相互引用。 从概念上讲，就好像所有源文件在被处理之前都连接到一个大文件。 在 C# 中永远都不需要使用前向声明，因为声明顺序无关紧要（极少数例外情况除外）。 C# 并不限制源文件只能声明一种公共类型，也不要求源文件的文件名必须与其中声明的类型相匹配。</p>
+<h3 id="2-2-类型"><a href="#2-2-类型" class="headerlink" title="2.2 类型"></a>2.2 类型</h3><h4 id="2-2-1-类型和成员"><a href="#2-2-1-类型和成员" class="headerlink" title="2.2.1 类型和成员"></a>2.2.1 类型和成员</h4><p>作为面向对象的语言，C# 支持封装、继承和多态性这些概念。 类可能会直接继承一个父类，并且可以实现任意数量的接口。 若要用方法重写父类中的虚方法，必须使用 <code>override</code> 关键字，以免发生意外重定义。 在 C# 中，结构就像是轻量级类，是可以实现接口但不支持继承的堆栈分配类型。 C# 还可提供记录，这些记录是主要用于存储数据值的类类型。</p>
+<h4 id="2-2-2-类和对象"><a href="#2-2-2-类和对象" class="headerlink" title="2.2.2 类和对象"></a>2.2.2 类和对象</h4><p><em>类</em> 是最基本的 C# 类型。 类是一种数据结构，可在一个单元中就将状态（字段）和操作（方法和其他函数成员）结合起来。 类为类实例（亦称为“对象”）提供了定义 。 类支持 <em>继承</em> 和 <em>多形性</em>，即 <em>派生类</em> 可以扩展和专门针对 <em>基类</em> 的机制。</p>
+<p>新类使用类声明进行创建。 类声明以标头开头。 标头指定以下内容：</p>
+<ul>
+<li>类的特性和修饰符</li>
+<li>类的名称</li>
+<li>基类（从<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/tour-of-csharp/types#base-classes">基类</a>继承时）</li>
+<li>接口由该类实现。</li>
+</ul>
+<p>标头后面是类主体，由在分隔符 <code>&#123;</code> 和 <code>&#125;</code> 内编写的成员声明列表组成。</p>
+<p>以下代码展示的是简单类 <code>Point</code> 的声明：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Point</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> X &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> Y &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Point</span>(<span class="params"><span class="built_in">int</span> x, <span class="built_in">int</span> y</span>)</span> =&gt; (X, Y) = (x, y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>类实例是使用 <code>new</code> 运算符进行创建，此运算符为新实例分配内存，调用构造函数来初始化实例，并返回对实例的引用。 以下语句创建两个 <code>Point</code> 对象，并将对这些对象的引用存储在两个变量中：</p>
+<p>C#复制</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Point(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> Point(<span class="number">10</span>, <span class="number">20</span>);</span><br></pre></td></tr></table></figure>
+
+<p>当无法再访问对象时，对象占用的内存会被自动回收。 没有必要也无法在 C# 中显式解除分配对象。</p>
+<h4 id="2-2-3-结构"><a href="#2-2-3-结构" class="headerlink" title="2.2.3 结构"></a>2.2.3 结构</h4><p>类定义可支持继承和多形性的类型。 它们使你能够基于派生类的层次结构创建复杂的行为。 相比之下，<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/struct">结构</a>类型是较为简单的类型，其主要目的是存储数据值。 结构不能声明基类型；它们从 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.valuetype">System.ValueType</a> 隐式派生。 不能从 <code>struct</code> 类型派生其他 <code>struct</code> 类型。 这些类型已隐式密封。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">struct</span> Point</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">double</span> X &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">double</span> Y &#123; <span class="keyword">get</span>; &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Point</span>(<span class="params"><span class="built_in">double</span> x, <span class="built_in">double</span> y</span>)</span> =&gt; (X, Y) = (x, y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-4-接口"><a href="#2-2-4-接口" class="headerlink" title="2.2.4 接口"></a>2.2.4 接口</h4><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/csharp/fundamentals/types/interfaces">接口</a>定义了可由类和结构实现的<strong>协定</strong>。 定义接口来声明在不同类型之间共享的功能。 例如，<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/api/system.collections.generic.ienumerable-1">System.Collections.Generic.IEnumerable</a> 接口定义了一个遍历集合（如数组）中所有项的一致方法。 接口可以包含方法、属性、事件和索引器。 接口通常不提供所定义成员的实现，仅指定必须由实现接口的类或结构提供的成员。</p>
+<p>接口可以采用 <em><strong>多重继承</strong></em>。 在以下示例中，接口 <code>IComboBox</code> 同时继承自 <code>ITextBox</code> 和 <code>IListBox</code>。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title">IControl</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Paint</span>(<span class="params"></span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title">ITextBox</span> : <span class="title">IControl</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetText</span>(<span class="params"><span class="built_in">string</span> text</span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title">IListBox</span> : <span class="title">IControl</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">SetItems</span>(<span class="params"><span class="built_in">string</span>[] items</span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title">IComboBox</span> : <span class="title">ITextBox</span>, <span class="title">IListBox</span> &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>类和结构可以实现多个接口。 在以下示例中，类 <code>EditBox</code> 同时实现 <code>IControl</code> 和 <code>IDataBound</code>。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title">IDataBound</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Bind</span>(<span class="params">Binder b</span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">EditBox</span> : <span class="title">IControl</span>, <span class="title">IDataBound</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Paint</span>(<span class="params"></span>)</span> &#123; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Bind</span>(<span class="params">Binder b</span>)</span> &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当类或结构实现特定接口时，此类或结构的实例可以隐式转换成相应的接口类型。 例如</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EditBox editBox = <span class="keyword">new</span> EditBox();</span><br><span class="line">IControl control = editBox;</span><br><span class="line">IDataBound dataBound = editBox;</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -185,16 +350,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/04/Csharp/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/09/04/Csharp/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/09/03/OPC%20UA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">OPC UA学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -209,253 +433,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-OPC UA" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/09/03/OPC%20UA/">OPC UA学习</a>
-    </h1>
-  
-
-        
-        <a href="/2021/09/03/OPC%20UA/" class="archive-article-date">
-  	<time datetime="2021-09-03T10:25:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id><a href="#" class="headerlink" title></a></h1>
-        
-          <a class="article-more-a" href="/2021/09/03/OPC%20UA/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OPC UA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/09/03/OPC%20UA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Csharp"><span class="toc-number">2.</span> <span class="toc-text">Csharp</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-NET"><span class="toc-number">2.1.</span> <span class="toc-text">1 .NET</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-NET%E7%AE%80%E4%BB%8B"><span class="toc-number">2.1.1.</span> <span class="toc-text">1.1 .NET简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-SDK-%E5%92%8C%E8%BF%90%E8%A1%8C%E6%97%B6"><span class="toc-number">2.1.2.</span> <span class="toc-text">1.2 SDK 和运行时</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-NuGet"><span class="toc-number">2.1.3.</span> <span class="toc-text">1.3 NuGet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%85%B6%E4%BB%96%E5%85%B3%E4%BA%8E-NET%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">2.1.4.</span> <span class="toc-text">1.4 其他关于.NET的概念</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-C-%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8"><span class="toc-number">2.2.</span> <span class="toc-text">2 C# 语言入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%AE%80%E4%BB%8B"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.1 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.2.1.1.</span> <span class="toc-text">2.1.1 语言介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-NET%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.1.2.</span> <span class="toc-text">2.1.2 .NET体系结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F"><span class="toc-number">2.2.1.3.</span> <span class="toc-text">2.1.3 类型和变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-4-%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.1.4.</span> <span class="toc-text">2.1.4 程序结构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2 类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E7%B1%BB%E5%9E%8B%E5%92%8C%E6%88%90%E5%91%98"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">2.2.1 类型和成员</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="toc-number">2.2.2.2.</span> <span class="toc-text">2.2.2 类和对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-3-%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.2.3.</span> <span class="toc-text">2.2.3 结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-4-%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.2.2.4.</span> <span class="toc-text">2.2.4 接口</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-西门子PLC学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/31/%E8%A5%BF%E9%97%A8%E5%AD%90PLC%E5%AD%A6%E4%B9%A0/">西门子PLC学习</a>
-    </h1>
   
 
-        
-        <a href="/2021/08/31/%E8%A5%BF%E9%97%A8%E5%AD%90PLC%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-08-31T04:40:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id><a href="#" class="headerlink" title></a></h1>
-        
-          <a class="article-more-a" href="/2021/08/31/%E8%A5%BF%E9%97%A8%E5%AD%90PLC%E5%AD%A6%E4%B9%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PLC</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">西门子</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/31/%E8%A5%BF%E9%97%A8%E5%AD%90PLC%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-win10Linux子系统搭建Hexo博客系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/">win10Linux子系统搭建Hexo博客系统</a>
-    </h1>
   
 
-        
-        <a href="/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/" class="archive-article-date">
-  	<time datetime="2021-07-23T10:25:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id><a href="#" class="headerlink" title></a></h1>
-        
-          <a class="article-more-a" href="/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">win10</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/07/23/win10Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -478,8 +481,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
