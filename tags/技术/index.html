@@ -6,17 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>C++面向对象 | Silence</title>
+  <title>Tag: 技术 | Silence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="C++面向对象">
-<meta property="og:url" content="http://example.com/2021/09/04/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Silence">
+<meta property="og:url" content="http://example.com/tags/%E6%8A%80%E6%9C%AF/index.html">
 <meta property="og:site_name" content="Silence">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-09-04T10:25:40.000Z">
-<meta property="article:modified_time" content="2021-09-09T07:12:34.457Z">
 <meta property="article:author" content="黑夜、">
-<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Silence" type="application/atom+xml">
@@ -141,235 +138,166 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-C++面向对象" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      C++面向对象
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/09/03/OPC%20UA/" class="archive-article-date">
+  	<time datetime="2021-09-03T10:25:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-03</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/09/03/OPC%20UA/">OPC UA学习</a>
     </h1>
   
 
-        
-        <a href="/2021/09/04/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2021-09-04T10:25:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id><a href="#" class="headerlink" title></a></h1><span id="more"></span>
-
-
-
-<p>&emsp;&emsp;经常听说C语言面向过程，C++面向对象。为什么说c语言是面向过程的，因为c语言的两个编程原则，(1)是结构化编程，c语言提供了诸如（do…while、for循环、while、if…else等语句）；(2)是自顶向下的设计原则，主要理念是将大型程序分解为小型，易于管理的任务，如果其中一项过大则继续分解为小型任务，直到将程序分解为小型、易于编写的模块单元(函数)。所以说，C语言结构化的编程技术反应了过程性的编程思路，强调的是算法，根据执行的操作来构思一个程序。</p>
-<p>&emsp;&emsp;其实，面向对象的程序设计OOP（Object Oriented Programming）与其说是一种方法，不如说是式一种编程思路，C语言也可以通过typedefine（主要通过结构体、枚举）和#define等命令，也可以实现一定程度的OOP的编程思路。</p>
-<p>&emsp;&emsp;与==结构化编程==强调的是==算法实现==不同，OOP强调的是数据。OOP不像过程编译那样试图使问题满足语言的过程性方法，而是让语言来满足问题的要求。其理念是设计与问题的本质相对应的数据格式。</p>
-<p>&emsp;&emsp;C++提出类的概念，类是一种规范，描述了这种新数据格式，对象使用这种规范构造的特定数据结构。例如，一个描述学生的基本特征（姓名，学号，性别，特长，成绩等），而对象就是特定的某个学生（李平安，123，男，打游戏，99）。类中还规定了使用哪些数据可以进行的某项特定操作，如可以根据算法得到学生的偏科情况，平均分，身体素质等等。设计类是一项艰巨的任务，C++提供了STL这样的类模板，C++真正的优点之一是：可以方便地重读使用和修稿现有的、经过大量测试验证的代码。</p>
-<p>@<a href="%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1">TOC</a></p>
-<h2 id="1-1-面向对象编程OOP"><a href="#1-1-面向对象编程OOP" class="headerlink" title="1.1 面向对象编程OOP"></a>1.1 面向对象编程OOP</h2><p>&emsp;<br>      &emsp;&emsp;面向对象程序设计的基本特点：抽象、封装、继承&amp;派生、多态。<br>      &emsp;<br>      &emsp;&emsp;(1)抽象：对同一类对象的共同属性和行为进行概括，形成共同性质的类。通过类来实现。<br>      比如将天下所有的表都可以抽象为一个clock类（class clock）：其中包含①数据抽象：小时(int hour)、分(int minute)、秒(int second)；②代码抽象：设置时间setTime()、显示时间showTime();<br>      &emsp;<br>      &emsp;&emsp;(2)封装：将抽象出的数据，代码封装在一起，形成一个类，封装可以提高安全性，简化编程，使用者只需要看说明了解接口如何使用就行了。如果一定要说封装是如何实现的，那就是通过类声明用的大括号封装 =={  }==。<br>      &emsp;<br>      &emsp;&emsp;(3)继承：在已有的类的基础上，进行扩展形成新的类。有利于代码重用。<br>      比如对上例的clock类，将其继承并且派生出一个新类：电子手表eClock，这个eClock不仅继承了clock的数据hour、minute、second和函数setTime、showTime，还在此基础上添加了设定闹钟时间alarmHour、alarmMinute、alarmSecond和闹钟提示bellClock()的功能。<br>      &emsp;<br>      &emsp;&emsp;(4)多态：同一名称，不同的功能实现方式。目的是，达到行为标识符统一，减少程序中的标识符的个数。</p>
-<h3 id="1-1-1-类和对象"><a href="#1-1-1-类和对象" class="headerlink" title="1.1.1 类和对象"></a>1.1.1 类和对象</h3><p>&emsp;&emsp;首先，类是同一类对象的抽象，对象是类的实例。  比如 学生student就是一个类，而 学生.李平安 就是学生这个抽象类的一个现实存在的实例。<br>&emsp;&emsp;<br>&emsp;&emsp;联系实际中的类，可以想象到在设计一个类的时候，我们需要关心：<br>&emsp;&emsp;(1) 此类型的合法值是什么？<br>&emsp;&emsp;(2) 此类型应有什么样的函数和操作符？<br>&emsp;&emsp;(3) 类的对象高如何创建、销毁？<br>&emsp;&emsp;(4) 如何进行对象的初始化和赋值？<br>&emsp;&emsp;(5) 对象作为函数的参数如何进行值传递？<br>&emsp;&emsp;(6) 谁将使用此类型的对象成员？</p>
-<h3 id="1-1-2-类定义的语法形式"><a href="#1-1-2-类定义的语法形式" class="headerlink" title="1.1.2 类定义的语法形式"></a>1.1.2 类定义的语法形式</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 类定义的语法</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 类名</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		公有成员(外部接口,任何外部函数都可以访问)</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		私有成员(对外屏蔽的，只允许本类的成员函数访问或授权友元访问)</span><br><span class="line">	<span class="keyword">protected</span>:</span><br><span class="line">		保护型成员(在继承与派生时与<span class="keyword">private</span>有区别)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 不论数据成员还是函数成员都可分为这三种形式</span></span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;为数据成员设置类内的初始值，在构造对象的时候，用于初始化对象的数据成员用的。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 类内的初始值</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">clock</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">setTime</span><span class="params">(<span class="keyword">int</span> newH, <span class="keyword">int</span> newM, <span class="keyword">int</span> newS)</span></span>;</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">showTime</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		<span class="keyword">int</span> hour = <span class="number">0</span>, minute = <span class="number">0</span>, second = <span class="number">0</span>; <span class="comment">//...</span></span><br><span class="line">		<span class="comment">//若构造函数未对这些数据成员进行初始化，就用类内的初始值</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 不论数据成员还是函数成员都可分为这三种形式</span></span><br></pre></td></tr></table></figure>
-<h3 id="1-1-3-对象定义的语法"><a href="#1-1-3-对象定义的语法" class="headerlink" title="1.1.3 对象定义的语法"></a>1.1.3 对象定义的语法</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对象定义的语法</span></span><br><span class="line"><span class="comment">// 类名 对象名; </span></span><br><span class="line"><span class="comment">// eg:</span></span><br><span class="line">clock myClock;  <span class="comment">// 类似于定义基本类型的变量</span></span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;类中的成员互相访问：直接用成员名就行了；<br>&emsp;&emsp;类外访问类的成员：通过对象来访问public成员 语法：”对象名.成员名”。</p>
-<h3 id="1-1-4-对象定义的语法"><a href="#1-1-4-对象定义的语法" class="headerlink" title="1.1.4 对象定义的语法"></a>1.1.4 对象定义的语法</h3><p>&emsp;&emsp;类的成员函数，再类中该如何定义类的成员函数<br>&emsp;&emsp;(1) 首先，在类中声明函数原型<br>&emsp;&emsp;(2) 对于简单的成员函数，可以内联在类的内部；<br>&emsp;&emsp;(3) 内联函数主要在类外给出函数体实现，并在函数名前使用类名加以限定(允许声明重载函数和带默认参数的函数):</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">clock</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setTime</span><span class="params">(<span class="keyword">int</span> newH, <span class="keyword">int</span> newM, <span class="keyword">int</span> newS)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">showTime</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> hour = <span class="number">0</span>, minute = <span class="number">0</span>, second = <span class="number">0</span>; <span class="comment">//...</span></span><br><span class="line">	<span class="comment">//若构造函数未对这些数据成员进行初始化，就用类内的初始值</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实现一个成员函数</span></span><br><span class="line"><span class="comment">// 类名和作用于限定符 ::</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clock::setTime</span><span class="params">(<span class="keyword">int</span> newH, <span class="keyword">int</span> newM, <span class="keyword">int</span> newS)</span> </span>&#123;</span><br><span class="line">	hour = newH;</span><br><span class="line">	minute = newM;</span><br><span class="line">	second = newS;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clock::showTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	cout &lt;&lt; hour &lt;&lt; <span class="string">&quot; : &quot;</span> &lt;&lt; minute &lt;&lt; <span class="string">&quot; : &quot;</span> &lt;&lt; second &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 对象的使用</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	clock myClock; <span class="comment">// 定义一个myClock的实例</span></span><br><span class="line">	myClock.<span class="built_in">setTime</span>(<span class="number">7</span>, <span class="number">30</span>, <span class="number">00</span>); <span class="comment">// 若注释掉改行 输出为 0:0:0</span></span><br><span class="line">	myClock.<span class="built_in">showTime</span>();  <span class="comment">// 输出为 7:30:0</span></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="1-1-5-构造函数和默认构造函数"><a href="#1-1-5-构造函数和默认构造函数" class="headerlink" title="1.1.5 构造函数和默认构造函数"></a>1.1.5 构造函数和默认构造函数</h3><p>&emsp;&emsp;如何对定义的对象初始化，按什么规律初始化，这都需要程序员写程序规定，故此，C++提供了构造函数。<br>&emsp;&emsp;==构造函数==：在==对象被创造出来的时候，将对象初始化为一个特定值==，是类中的一个特殊函数，用于描述初始化算法：<br>&emsp;&emsp;(1). 构造函数与类名相同；<br>&emsp;&emsp;(2). 构造函数没有函数类型，当然也无返回值；<br>&emsp;&emsp;(3). 可以是内联函数，允许重载，可以带默认参数；<br>&emsp;&emsp;(4). 构造函数在对象被创建的时候调用；</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">clock</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	</span><br><span class="line">    <span class="built_in">clock</span>();                    <span class="comment">// 默认构造函数</span></span><br><span class="line">    <span class="comment">/* 用default关键字表示依然保留默认构造函数，有点函数重载的味道 */</span></span><br><span class="line">    <span class="built_in">clock</span>(<span class="keyword">int</span> newH, <span class="keyword">int</span> newM, <span class="keyword">int</span> newS);  <span class="comment">// 构造函数</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setTime</span><span class="params">(<span class="keyword">int</span> newH, <span class="keyword">int</span> newM, <span class="keyword">int</span> newS)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">showTime</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> hour = <span class="number">0</span>, minute = <span class="number">0</span>, second = <span class="number">0</span>; <span class="comment">//...</span></span><br><span class="line">	<span class="comment">//若构造函数未对这些数据成员进行初始化，就用类内的初始值</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clock::setTime</span><span class="params">(<span class="keyword">int</span> newH, <span class="keyword">int</span> newM, <span class="keyword">int</span> newS)</span> </span>&#123;</span><br><span class="line">	hour = newH;</span><br><span class="line">	minute = newM;</span><br><span class="line">	second = newS;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clock::showTime</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	cout &lt;&lt; hour &lt;&lt; <span class="string">&quot; : &quot;</span> &lt;&lt; minute &lt;&lt; <span class="string">&quot; : &quot;</span> &lt;&lt; second &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*构造函数实现*/</span></span><br><span class="line">clock::<span class="built_in">clock</span>(<span class="keyword">int</span> newH, <span class="keyword">int</span> newM, <span class="keyword">int</span> newS)&#123;</span><br><span class="line">    hour = newH;</span><br><span class="line">	minute = newM;</span><br><span class="line">	second = newS;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*对于这种简单的构造函数，也可以写成以下初始化列表的形式，这样效率高：</span></span><br><span class="line"><span class="comment">clock::clock(int newH, int newM, int newS):hour(newH),minute(newM),second(newS)&#123;&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">clock::<span class="built_in">clock</span>() : <span class="built_in">hour</span>(<span class="number">0</span>), <span class="built_in">minute</span>(<span class="number">0</span>), <span class="built_in">second</span>(<span class="number">0</span>)&#123;&#125; <span class="comment">//默认构造函数，其实就是函数重载么对吧</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function">clock <span class="title">myClock</span><span class="params">(<span class="number">8</span>, <span class="number">30</span>, <span class="number">30</span>)</span></span>;</span><br><span class="line">	<span class="comment">// 在对象定义的时候初始化，类似于其他变量类型的定义与初始化</span></span><br><span class="line">	myClock.<span class="built_in">showTime</span>();</span><br><span class="line">	</span><br><span class="line">	clock myClock1; <span class="comment">// 这个对象(myClock1)的初始化就调用了默认构造函数</span></span><br><span class="line">	<span class="comment">// 如果没有默认构造函数，类内也无初值，这里就会报错，这就是为什么我们经常有构造函数还要写一个默认构造函数了</span></span><br><span class="line">    myClock1.<span class="built_in">showTime</span>();</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>此时的执行结果为:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">8 : 30 : 30</span><br><span class="line">请按任意键继续. . .</span><br></pre></td></tr></table></figure>
-<h3 id="1-1-6-委托构造函数"><a href="#1-1-6-委托构造函数" class="headerlink" title="1.1.6 委托构造函数"></a>1.1.6 委托构造函数</h3><p>&emsp;&emsp;当在一个类中，重载多个构造函数的时候，往往构造函数的初始化方式和函数体都是相同的，如果要写多个函数体重载，就显得重复了，这时候，为了简化代码的编程，可以采用==委托机制==：<br>如,将上例中的：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clock::<span class="built_in">clock</span>(<span class="keyword">int</span> newH, <span class="keyword">int</span> newM, <span class="keyword">int</span> newS):<span class="built_in">hour</span>(newH),<span class="built_in">minute</span>(newM),<span class="built_in">second</span>(newS)&#123;&#125;</span><br><span class="line">clock::<span class="built_in">clock</span>() : <span class="built_in">hour</span>(<span class="number">0</span>), <span class="built_in">minute</span>(<span class="number">0</span>), <span class="built_in">second</span>(<span class="number">0</span>)&#123;&#125;</span><br></pre></td></tr></table></figure>
-<p>可以用委托的方法：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clock::<span class="built_in">clock</span>(<span class="keyword">int</span> newH, <span class="keyword">int</span> newM, <span class="keyword">int</span> newS):<span class="built_in">hour</span>(newH),<span class="built_in">minute</span>(newM),<span class="built_in">second</span>(newS)&#123;&#125;</span><br><span class="line">clock::<span class="built_in">clock</span>():clock::<span class="built_in">clock</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)&#123;&#125;  <span class="comment">// 无参数的构造函数，调用了有参数表的构造函数</span></span><br></pre></td></tr></table></figure>
-<p>委托构造函数的最大好处就是保持了代码的一致性，方便修改。</p>
-<h3 id="1-1-7-复制构造函数"><a href="#1-1-7-复制构造函数" class="headerlink" title="1.1.7 复制构造函数"></a>1.1.7 复制构造函数</h3><p>&emsp;&emsp;定义基本类型的变量的时候，经常会用到一个已知的变量初始化这个变量。在定义对象的时候也是相同的，==用一个已知存在的对象初始化新对象==，是一种==特殊的构造函数==。<br>&emsp;&emsp;编译器会生成一个默认的复制构造函数，可以实现两个对象之间的一一对应复制，在大多数情况下就已经够好用了。我这里只记了用已知对象初始化新对象的语法：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">clock <span class="title">myClock2</span><span class="params">(myClock)</span></span>;</span><br><span class="line">   myClock2.<span class="built_in">showTime</span>();</span><br></pre></td></tr></table></figure>
-<p>执行结果为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8 : 30 : 30</span><br></pre></td></tr></table></figure>
-<h3 id="1-1-8-析构函数"><a href="#1-1-8-析构函数" class="headerlink" title="1.1.8 析构函数"></a>1.1.8 析构函数</h3><p>&emsp;&emsp;当一个对象在存在期间可能会占用很多系统资源。在对象消亡的时候就需要做一些善后工作，就由析构函数完成，释放占用的资源。<br>&emsp;&emsp;当一个对象被创建的时候，自动调用构造函数；<br>&emsp;&emsp;当一个对象要消亡的时候，自动调用析构函数；<br>&emsp;&emsp;(1). 析构函数原型：~类名();<br>&emsp;&emsp;(2). 析构函数没有参数，也无返回类型，无返回值；<br>&emsp;&emsp;(3). 和构造函数一样，在编程时不写析构函数/构造函数时，系统会自动生成一个默认的构造函数，但其函数体是空的，不进行任何操作，只是为了满足编译的语法需要； </p>
-<p>简单综合实例：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">complex</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">complex</span>(<span class="keyword">int</span> ,<span class="keyword">int</span>);</span><br><span class="line">    <span class="built_in">complex</span>();</span><br><span class="line">    <span class="built_in">complex</span>(complex &amp;complexObj);</span><br><span class="line">    ~<span class="built_in">complex</span>();</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">complexShow</span><span class="params">()</span></span>;</span><br><span class="line">    complex <span class="keyword">operator</span>+(<span class="keyword">const</span> complex &amp;complexObj);</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> real;</span><br><span class="line">    <span class="keyword">int</span> imag;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 构造函数</span></span><br><span class="line">complex::<span class="built_in">complex</span>(<span class="keyword">int</span> r ,<span class="keyword">int</span> i)&#123;</span><br><span class="line">    real = r;</span><br><span class="line">    imag = i;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;complex::complex(int r ,int i) called!&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 默认构造函数</span></span><br><span class="line">complex::<span class="built_in">complex</span>() : complex::<span class="built_in">complex</span>(<span class="number">0</span>, <span class="number">0</span>)&#123;cout &lt;&lt; <span class="string">&quot;complex::complex() called!&quot;</span> &lt;&lt; endl;&#125;;</span><br><span class="line"><span class="comment">/* 直接借助构造函数写默认构造函数简单，如上</span></span><br><span class="line"><span class="comment">complex::complex()&#123;</span></span><br><span class="line"><span class="comment">    real = 0;</span></span><br><span class="line"><span class="comment">    imag = 0;</span></span><br><span class="line"><span class="comment">    cout &lt;&lt; &quot;complex::complex() called!&quot; &lt;&lt; endl;</span></span><br><span class="line"><span class="comment">&#125;;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 复制构造函数</span></span><br><span class="line">complex::<span class="built_in">complex</span>(complex &amp;complexObj)&#123;</span><br><span class="line">    real = complexObj.real;</span><br><span class="line">    imag = complexObj.imag;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;complex::complex(complex &amp;complexObj) called!&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 析构函数</span></span><br><span class="line">complex::~<span class="built_in">complex</span>()&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;~complex called!&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 成员函数 complexShow</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">complex::complexShow</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cout &lt;&lt; real &lt;&lt; <span class="string">&quot;+&quot;</span> &lt;&lt; imag &lt;&lt; <span class="string">&quot;i&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运算符重载</span></span><br><span class="line">complex complex::<span class="keyword">operator</span>+(<span class="keyword">const</span> complex &amp;complexObj) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">complex</span>(real + complexObj.real, imag + complexObj.imag);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    complex c1;</span><br><span class="line">    <span class="function">complex <span class="title">c2</span><span class="params">(<span class="number">20</span>, <span class="number">3</span>)</span></span>;</span><br><span class="line">    <span class="function">complex <span class="title">c3</span><span class="params">(c2)</span></span>;</span><br><span class="line">    c2.<span class="built_in">complexShow</span>();</span><br><span class="line">    c3.<span class="built_in">complexShow</span>();</span><br><span class="line">    c1 = c2 + c3;</span><br><span class="line">    c1.<span class="built_in">complexShow</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">complex::complex(int r ,int i) called!</span><br><span class="line">complex::complex() called!</span><br><span class="line">complex::complex(int r ,int i) called!</span><br><span class="line">complex::complex(complex &amp;complexObj) called!</span><br><span class="line">20+3i</span><br><span class="line">20+3i</span><br><span class="line">complex::complex(int r ,int i) called!</span><br><span class="line">~complex called!</span><br><span class="line">40+6i</span><br><span class="line">~complex called!</span><br><span class="line">~complex called!</span><br><span class="line">~complex called!</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-2-类的组合"><a href="#1-2-类的组合" class="headerlink" title="1.2 类的组合"></a>1.2 类的组合</h2><p>&emsp;&emsp;<br>&emsp;&emsp;<br>&emsp;&emsp;<br>&emsp;&emsp;<br>&emsp;&emsp;<br>&emsp;&emsp;</p>
-<h2 id="1-3-继承"><a href="#1-3-继承" class="headerlink" title="1.3 继承"></a>1.3 继承</h2><h3 id="1-3-1-类的继承"><a href="#1-3-1-类的继承" class="headerlink" title="1.3.1 类的继承"></a>1.3.1 类的继承</h3><p>&emsp;&emsp;继承可以使一个类可以从现有类中派生，而不必重新定义一个新类。继承和派生其实是对同一过程的不同角度的描述。①继承的目的：实现代码重用；②派生的目的：原有程序无法解决问题，需要进行改造；</p>
-<p>继承的语法形式：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单继承：</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 派生类名:</span>继承方式 基类名</span><br><span class="line">&#123;</span><br><span class="line">	成员声明;  <span class="comment">// 除了基类以外，派生类本身派生了哪些成员</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* *********************** */</span></span><br><span class="line"><span class="comment">// 多继承：</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 派生类名:</span>继承方式<span class="number">1</span> 基类名<span class="number">1</span> , 继承方式<span class="number">2</span> 基类名<span class="number">2</span> , ...</span><br><span class="line">&#123;</span><br><span class="line">	成员声明;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="1-3-2-派生类的构成"><a href="#1-3-2-派生类的构成" class="headerlink" title="1.3.2 派生类的构成"></a>1.3.2 派生类的构成</h3><p>派生类的构成：<br>(1). 吸收的基类成员：<br>&emsp; ◇ 默认情况下派生类包含了全部基类除构造函数和析构函数之外的所有成员函数；<br>&emsp; ◇ 可以用using语句继承基类构造函数。<br>(2). 改造的基类成员：<br>&emsp; ◇ 在派生类中声明一个与基类同名的新成员，将基类的成员覆盖，因为会现在派生类中寻找成员函数；<br>(3). 添加的新的成员  ☆☆☆<br>&emsp; ◇ 完全新增新功能，新数据</p>
-<h3 id="1-3-3-继承方式"><a href="#1-3-3-继承方式" class="headerlink" title="1.3.3 继承方式"></a>1.3.3 继承方式</h3><p>继承方式：<br>不同的继承方式影响主要体现在：<br>&emsp; &emsp; ◇派生类成员对基类成员的访问权限；<br>&emsp; &emsp; ◇通过派生类对象对基类成员的访问权限。</p>
-<p>◇ public(公有继承): 基类的public和protected成员:访问属性在派生类中保持不变；基类的private成员:不可直接访问；派生类的成员不能访问基类中的private成员；通过派生类对象，可以访问基类的public和protected成员；</p>
-<p>◇ protected(保护继承):基类的public和protected成员，都以protected的身份出现在派生类中；基类的private成员:不可直接访问；派生类的成员不能访问基类中的private成员；通过派生类对象，不能访问基类的任何成员；</p>
-<p>◇ private(私有继承):基类的所有成员，都以private的身份出现在派生类中；派生类中的成员可以访问基类的public和protected成员；通过派生类产生的对象，不能访问基类的任何成员。</p>
-<h3 id="1-3-4-派生类的构造函数"><a href="#1-3-4-派生类的构造函数" class="headerlink" title="1.3.4 派生类的构造函数"></a>1.3.4 派生类的构造函数</h3><p>在默认情况下：<br>◇ 基类的构造函数不被继承；<br>◇ 派生类需要定义自己的构造函数，且派生类的构造函数还需要负责向基类的初始化功能传递参数，由基类的构造函数完成基类的初始化，由派生类的函数完成本类新增成员的函数。</p>
-<p>单继承时构造函数的定义语法</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">派生类名::派生类名(基类所需形参,本类所需形参):基类名(参数表),本类名(本类成员初始化列表)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 初始化函数体;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>eg:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> ID;</span><br><span class="line">    string name;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">getin</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">showout</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="built_in">student</span>();</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> score;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">student::showout</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Name: &quot;</span> &lt;&lt; name &lt;&lt; endl</span><br><span class="line">         &lt;&lt; <span class="string">&quot;ID: &quot;</span> &lt;&lt; ID &lt;&lt; endl</span><br><span class="line">         &lt;&lt; <span class="string">&quot;Score: &quot;</span> &lt;&lt; score &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">student::getin</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;enter name:&quot;</span>;</span><br><span class="line">    cin &gt;&gt; name;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;enter ID:&quot;</span>;</span><br><span class="line">    cin &gt;&gt; ID;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;enter score:&quot;</span>;</span><br><span class="line">    cin &gt;&gt; score;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">student::<span class="built_in">student</span>()&#123;</span><br><span class="line">    name = <span class="string">&quot;name&quot;</span>;</span><br><span class="line">    ID = <span class="number">0</span>;</span><br><span class="line">    score = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student_pro</span>:</span><span class="keyword">public</span> student&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">showMessage</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="built_in">student_pro</span>();</span><br><span class="line"><span class="keyword">private</span>: </span><br><span class="line">    string father = <span class="string">&quot;Wudi&quot;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">student_pro::showMessage</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">showout</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Father:&quot;</span> &lt;&lt; father &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">student_pro::<span class="built_in">student_pro</span>() : student::<span class="built_in">student</span>()&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Enter father&#x27;s name: &quot;</span>;</span><br><span class="line">    cin &gt;&gt; father;</span><br><span class="line">&#125;; <span class="comment">//参数表均为空</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// student LiMing;</span></span><br><span class="line">    <span class="comment">// LiMing.getin();</span></span><br><span class="line">    <span class="comment">// LiMing.showout();</span></span><br><span class="line"></span><br><span class="line">    student_pro LIPingAn;</span><br><span class="line">    LIPingAn.<span class="built_in">getin</span>();</span><br><span class="line">    LIPingAn.<span class="built_in">showout</span>();</span><br><span class="line">    LIPingAn.<span class="built_in">showMessage</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-5"><a href="#1-3-5" class="headerlink" title="1.3.5"></a>1.3.5</h3><p>还差一部分内容，以后可能补上</p>
-<h3 id="1-3-6-虚基类与虚继承"><a href="#1-3-6-虚基类与虚继承" class="headerlink" title="1.3.6 虚基类与虚继承"></a>1.3.6 虚基类与虚继承</h3><p>&emsp;&emsp;是不是说继承多个基类的时候，有重名的成员也没有关系，访问的时候用类名限定就可以了？如果某个派生类从多个基类派生，而这些基类又有共同的基类，则在访问此共同基类的成员时。将产生冗余，并有可能因冗余带来不一致性。<br>&emsp;&emsp;虚基类的声明：关键字virtual</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以virtual说明基类的继承方式为虚继承</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 新类名:</span><span class="keyword">virtual</span> <span class="keyword">public</span> 基类名</span><br><span class="line">&#123;</span><br><span class="line">	新类成员</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>作用：<br>&emsp;◇主要用来解决多继承时可能发生的对同一基类继承多次而产生的冗余/二义性问题；<br>&emsp;◇为最远派生类提供唯一成员，而不重复产生多次复制。<br>注意：<br>&emsp;◇在第一级继承的时，就要将共同基类设计为虚基类。<br>==虚基类及其派生类构造函数==:<br>&emsp;◇ 虚基类及其派生类构造函数；<br>&emsp;◇ 虚基类的成员是由最远派生类的构造函数通过调用虚基类的构造函数进行初始化的；<br>&emsp;◇ 在整个继承结构中，直接或间接继承虚基类的所有派生类,都必须在构造函数的成员初始化表中为虚基类的构造函数列出参数。如果未列出， 则表示调用该虚基类的默认构造函数；<br>&emsp;◇ 在建立对象时，只有最远派生类的构造函数调用虚基类的构造函数，其他类对虚基类构造函数的调用被忽略。</p>
-<h2 id="1-4-多态"><a href="#1-4-多态" class="headerlink" title="1.4 多态"></a>1.4 多态</h2><p>&emsp;&emsp;多态性是面向对象程序设计的一个重要特征，利用多态性可以设计和实现一个易于扩展的系统。==多态性是指具有不同功能的函数可以用同一个函数名，这样就可以用一个函数名调用不同内容的函数，发出同样的消息被不同类型的对象接收时，导致完全不同的行为==。这里说的消息主要指类的成员函数的调用，而不同的行为是指不同的实现。<br>&emsp;&emsp;多态性通过联编实现。联编是指一个计算机程序自身彼此关联过程。按照联编所进行的阶段不同，可以分为两种不同的联编方法：静态联编和动态联编。在C++中，根据联编的时刻不同，存在两种类型的多态，即函数重载和虚函数。</p>
-<h3 id="1-4-1-运算符重载规则"><a href="#1-4-1-运算符重载规则" class="headerlink" title="1.4.1 运算符重载规则"></a>1.4.1 运算符重载规则</h3><p>&emsp;&emsp;对于自定义的类型，如何使用系统预先定义好的运算？比如自定义一个复数类，该如何实现复数的运算？将预定义好的运算符，针对新的类型赋予新的含义。<br>&emsp;&emsp;◇ 运算符本质也是一种函数，对运算符的重载也就是对函数的重载。<br>&emsp;&emsp;◇ 只能重载预定义好的运算符；<br>&emsp;&emsp;◇ 重载后的优先级和结和性保持不变。<br>&emsp;&emsp;◇ 运算符重载时针对新类型数据的实际需要，对原有运算符进行适当的改造。</p>
-<p>实现方式：<br>&emsp;&emsp;◇ 重载为类的非静态成员函数；<br>&emsp;&emsp;◇ 重载为非成员函数；</p>
-<p>(1)重载为类成员的运算符函数定义形式：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">函数类型 <span class="keyword">operator</span> 运算符(形参)</span><br><span class="line">&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line">参数个数 = 原操作数个数 - <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>双目运算符重载规则：<br>&emsp;&emsp;◇ 如果要重载B为类成员函数，使之能实现表达式 oprd1 B oprd2 ，其中oprd1 为 A 类对象，==则 B 应被重载为 A 类的成员函数==，==形参类型应该是 oprd2 所属的类型==。<br>&emsp;&emsp;◇经重载后，表达式 oprd1 B oprd2 相当于 oprd1.operator  B(oprd2);</p>
-<p>(2) 运算符重载为非成员函数<br>下面两种情况，需要将运算符重载为类外的函数：<br>&emsp;&emsp;◇ 将操作符重载为类的成员函数的时候，左操作符必须是类的对象；<br>&emsp;&emsp;◇ 如果做操作数是类的对象，但不是我们自己设计的类；</p>
-<p>运算符重载为非成员函数的规则：<br>&emsp;&emsp;◇ 函数的形参表：依自左至右次序依次排列各操作数；<br>&emsp;&emsp;◇ 如果在运算符的重载中需要操作某类对象的私有成员，可以将此函数声明为类的友元。</p>
-<h3 id="1-4-2-虚函数"><a href="#1-4-2-虚函数" class="headerlink" title="1.4.2 虚函数"></a>1.4.2 虚函数</h3><p>&emsp;&emsp;在类的继承层次结构中，在不同的层次中可以出现名字，参数个数和类型都相同而功能不同的函数。编译器按照先自己后基类的顺序进行查找覆盖，如果子类有父类相同的原型的成员函数时，要想调用父类的成员函数。需要对父类重新引用调用。==虚函数可以解决子类和基类相同原型成员函数的函数调用问题==。</p>
-<p>&emsp;&emsp;虚函数允许在派生类中重新定义与基类同名的函数，并且可以通过基类指针或引用来访问基类和派生类中的同名函数。</p>
-<p>&emsp;&emsp;虚函数：<br>&emsp;◇ 用virtua关键字说明的函数，(在声明的时候加关键字);<br>&emsp;◇ 虚函数是实现运行时多态的基础<br>&emsp;◇ C++中的虚函数是动态绑定的函数<br>&emsp;◇ 虚函数必须是非静态的成员函数，虚函数经过派生之后，就可以实现运行过程中的多态。</p>
-<p>&emsp;&emsp; 在基类中用virtual声明的成员函数为虚函数，在派生类中重新定义此函数，改变该函数的功能。在C++语言中虚函数可以继承，当一个成员函数被定义为虚函数后，其派生类的同名函数都自动成为虚函数，但如果派生类中没有覆盖基类的虚函数，则调用时调用基类的虚函数。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OPC UA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">项目</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/09/04/C++%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2021/09/04/Csharp/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          C#学习
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2021/09/03/OPC%20UA/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">OPC UA学习</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/08/31/%E8%A5%BF%E9%97%A8%E5%AD%90PLC%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2021-08-31T04:40:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-31</time>
+</a>
         </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8BOOP"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 面向对象编程OOP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1.1 类和对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-%E7%B1%BB%E5%AE%9A%E4%B9%89%E7%9A%84%E8%AF%AD%E6%B3%95%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.1.2 类定义的语法形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-%E5%AF%B9%E8%B1%A1%E5%AE%9A%E4%B9%89%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.1.3 对象定义的语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-4-%E5%AF%B9%E8%B1%A1%E5%AE%9A%E4%B9%89%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.1.4 对象定义的语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-5-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E9%BB%98%E8%AE%A4%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.1.5 构造函数和默认构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-6-%E5%A7%94%E6%89%98%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.6.</span> <span class="toc-text">1.1.6 委托构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-7-%E5%A4%8D%E5%88%B6%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.7.</span> <span class="toc-text">1.1.7 复制构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-8-%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.8.</span> <span class="toc-text">1.1.8 析构函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%B1%BB%E7%9A%84%E7%BB%84%E5%90%88"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 类的组合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E7%BB%A7%E6%89%BF"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 类的继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-%E6%B4%BE%E7%94%9F%E7%B1%BB%E7%9A%84%E6%9E%84%E6%88%90"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 派生类的构成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 继承方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-4-%E6%B4%BE%E7%94%9F%E7%B1%BB%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.4.</span> <span class="toc-text">1.3.4 派生类的构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-5"><span class="toc-number">1.3.5.</span> <span class="toc-text">1.3.5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-6-%E8%99%9A%E5%9F%BA%E7%B1%BB%E4%B8%8E%E8%99%9A%E7%BB%A7%E6%89%BF"><span class="toc-number">1.3.6.</span> <span class="toc-text">1.3.6 虚基类与虚继承</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-%E5%A4%9A%E6%80%81"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 多态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD%E8%A7%84%E5%88%99"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.4.1 运算符重载规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-%E8%99%9A%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.2.</span> <span class="toc-text">1.4.2 虚函数</span></a></li></ol></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/08/31/%E8%A5%BF%E9%97%A8%E5%AD%90PLC%E5%AD%A6%E4%B9%A0/">西门子PLC学习</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PLC</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">西门子</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
         </div>
-        
-    </div>
-</aside>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+      
+        </div></section>
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/06/14/ANSYS%20workbench/" class="archive-article-date">
+  	<time datetime="2020-06-14T00:25:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-14</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/06/14/ANSYS%20workbench/">ANSYS workbench数值分析 新手笔记</a>
+    </h1>
+  
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">ANSYS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
+          
 
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
   
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -392,9 +320,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -479,7 +407,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">C#</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -487,7 +415,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">C#</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">OPC UA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">项目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -500,6 +440,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">兴趣</a>
               </li>
              
               <li class="article-tag-list-item">
